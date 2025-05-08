@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Estilos personalizados para markdown */
+.prose pre {
+  @apply rounded-md overflow-hidden;
+}
+
+.prose code {
+  @apply text-emerald-300;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply text-white mt-6 mb-4;
+}
+
+.prose p {
+  @apply my-3;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-3 pl-6;
+}
+
+.prose li {
+  @apply my-1;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-emerald-500/50 pl-4 italic text-gray-400;
+}
+
+.prose hr {
+  @apply my-6 border-gray-700;
+}
+
+.prose a {
+  @apply text-emerald-400 hover:text-emerald-300 underline;
+}
+
+.prose table {
+  @apply border-collapse border border-gray-700 my-4;
+}
+
+.prose th {
+  @apply border border-gray-700 px-4 py-2 bg-gray-800;
+}
+
+.prose td {
+  @apply border border-gray-700 px-4 py-2;
+}
+
+/* Estilos para bloques de código */
+.prose pre {
+  @apply bg-gray-800 rounded-md p-4 overflow-x-auto my-4;
+}
+
+.prose pre code {
+  @apply text-gray-200 font-mono text-sm;
+}
+
+/* Estilos para lenguajes específicos */
+.prose code.language-js,
+.prose code.language-javascript {
+  @apply text-yellow-300;
+}
+
+.prose code.language-ts,
+.prose code.language-typescript {
+  @apply text-blue-300;
+}
+
+.prose code.language-jsx,
+.prose code.language-tsx {
+  @apply text-green-300;
+}
+
+.prose code.language-html {
+  @apply text-orange-300;
+}
+
+.prose code.language-css {
+  @apply text-purple-300;
+}
+
+.prose code.language-json {
+  @apply text-cyan-300;
+}
+
+.prose code.language-bash,
+.prose code.language-sh {
+  @apply text-gray-300;
+}
+
+.prose code.language-md,
+.prose code.language-markdown {
+  @apply text-pink-300;
+}
